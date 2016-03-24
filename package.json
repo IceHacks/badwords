@@ -1,0 +1,32 @@
+{
+  "name": "badword-util",
+  "version": "1.0.0",
+  "author": "Chickensoups <vuongkm01526@gmail.com>",
+  "license": "MIT",
+  "description": "A highly consumable list and utilities of bad english words",
+  "main": "./dist/badwords.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chickensoups/badwords.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chickensoups/badwords/issues"
+  },
+  "keywords": [
+    "bad",
+    "word",
+    "words",
+    "profanity",
+    "filter",
+    "blacklist",
+    "black",
+    "list",
+    "swear"
+  ],
+  "dependencies": {
+    "mocha": "^2.4.5"
+  }
+}
