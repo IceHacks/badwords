@@ -1,5 +1,5 @@
 var assert = require('assert');
-var list = require('../dist/badwords-util');
+var list = require('../dist/badword-util');
 
 describe('filter', function(){
   it('The list should contain property array, object and regex', function(){
