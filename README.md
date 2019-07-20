@@ -21,7 +21,6 @@ This data has been exposed as
 
 depending on what is required for your purposes.
 
-<<<<<<< HEAD
 - var badwordArray = bwut.array;
 - var badwordObject = bwut.object;
 - var badwordRegex = bwut.regex;
