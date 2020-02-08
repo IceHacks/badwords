@@ -129,7 +129,7 @@ var filterBadWords = function filterBadWords(text, badWords, character, numberOf
                     var tmpBadWord = new String(badWord);
                     replaceStr = tmpBadWord.substr(0, tmpBadWord.length - numberOfChar) + Array(numberOfChar + 1).join(character);
                 }
-                text = text.replace(new RegExp(badWord, 'g'), replaceStr);
+                text = text.replace(new RegExp(badWord, 'gi'), replaceStr);
             }
         }
     }
