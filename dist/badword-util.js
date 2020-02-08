@@ -105,7 +105,7 @@ var filterBadWords = function filterBadWords(text, badWords, character, numberOf
     if (badWords) {
         for (var i = 0; i < ARRAY.length; i++) {
             var badWord = ARRAY[i];
-            if (text.indexOf(badWord) !== -1 && badWords.indexOf(badWord) !== -1) {
+            if (text.match(new RegExp(badWord, 'gi')) && badWords.indexOf(badWord) !== -1) {
                 var replaceStr = '';
                 //generate replace string
                 if (numberOfChar === 1000000 || numberOfChar >= badWord.length) {
@@ -114,13 +114,13 @@ var filterBadWords = function filterBadWords(text, badWords, character, numberOf
                     var tmpBadWord = new String(badWord);
                     replaceStr = tmpBadWord.substr(0, tmpBadWord.length - numberOfChar) + Array(numberOfChar + 1).join(character);
                 }
-                text = text.replace(new RegExp(badWord, 'g'), replaceStr);
+                text = text.replace(new RegExp(badWord, 'gi'), replaceStr);
             }
         }
     } else {
         for (var i = 0; i < ARRAY.length; i++) {
             var badWord = ARRAY[i];
-            if (text.indexOf(badWord) !== -1) {
+            if (text.match(new RegExp(badWord, 'gi'))) {
                 var replaceStr = '';
                 //generate replace string
                 if (numberOfChar === 1000000 || numberOfChar >= badWord.length) {
